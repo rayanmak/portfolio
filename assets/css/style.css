@@ -378,14 +378,16 @@ nav{
 	border-radius: 50px;
 	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.1);
 	cursor: pointer;
-	transition: .2s;
+	
 }
 
 .icon i{
 	font-size: 25px;
+	color: var(--text-color-second);
+	transition: .2s;
 }
 
-.icon:hover{
+.icon:hover.icon i{
 	color: var(--first-color);
 }
 
@@ -842,6 +844,10 @@ footer{
 
 	.social_icons{
 		margin-top: 2em;
+	}
+
+	.social_icons a{
+		color: var(--first-color);
 	}
 
 	.featured-image{
