@@ -125,6 +125,8 @@ var typingEffect = new Typed(".typedText", {
 
   /* -- PROJECT BOX -- */
   sr.reveal('.project-box',{interval: 200})
+  sr.reveal('.card-article',{interval: 200})
+
 
   /* -- HEADINGS -- */
   sr.reveal('.top-header',{})
@@ -176,34 +178,3 @@ window.addEventListener('scroll', scrollActive)
 
 
 
-// const swiper = new Swiper('.slider-wrapper', {
-
-//   loop: true,
-//   grabCursor: true,
-//   spaceBetween: 30,
-
-//   // If we need pagination
-//   pagination: {
-//     el: '.swiper-pagination',
-//     clickable: true,
-//     dynamicBullets: true
-//   },
-
-//   // Navigation arrows
-//   navigation: {
-//     nextEl: '.swiper-button-next',
-//     prevEl: '.swiper-button-prev',
-//   },
-
-//   breakpoints: {
-//     0: {
-//       slidesPerView: 1,
-//     },
-//     1400: {
-//       slidesPerView: 2,
-//     },
-//     2000: {
-//       slidesPerView: 3,
-//     },
-//   }
-// });

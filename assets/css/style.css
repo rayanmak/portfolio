@@ -546,13 +546,13 @@ h3{
 /* ----- PROJECTS BOX ----- */
 .container-project{
 	display: flex;
-	align-items: center;
 	justify-content: center;
-	
+	margin-inline: 1.5rem;
+	padding-block: 5rem;
 }
 
 .card-container{
-	display: grid;
+	display: flex;
 	row-gap: 3.5rem;
 	margin-inline: 2rem;
 }
@@ -563,7 +563,7 @@ h3{
 }
 
 .card-image{
-	width: 328px;
+	width: 428px;
 	border-radius: 1.5rem;
 	display: block;
 }
@@ -579,7 +579,7 @@ h3{
 	left: 0;
 	right: 0;
 	margin-inline: auto;
-	/* opacity: 0; */
+	opacity: 0;
 	transition: opacity 1s 1s;
 }
 
@@ -602,6 +602,15 @@ h3{
 	animation: remove-overflow 2s forwards;
 }
 
+.card-article:not(:hover){
+	animation: show-overflow 2s forwards;
+}
+
+.card-article:not(:hover) .card-data{
+	animation: remove-data 1s forwards;
+}
+
+
 @keyframes show-data {
 	50%{
 		transform: translateY(-10rem);
@@ -617,6 +626,27 @@ h3{
 	}
 }
 
+@keyframes remove-data {
+	0%{
+		transform: translateY(-7rem);
+	}
+	50%{
+		transform: translateY(-10rem);
+	}
+	100%{
+		transform: translateY(.5rem);
+	}
+}
+
+@keyframes show-overflow {
+	0%{
+		overflow: initial;
+		pointer-events: none;
+	}
+	50%{
+		overflow: hidden;
+	}
+}
 
 /* ----- CONTACT BOX ----- */
 .contact-info{
@@ -876,6 +906,18 @@ footer{
 		width: 100%;
 	}
 
+	.container-project{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 50px;
+	}
+
+	.card-image{
+		width: 100%;
+	}
+
 	.contact-info{
 		width: 100%;
 	}
@@ -899,3 +941,45 @@ footer{
 
 	
 }
+					/* PROJECT */
+
+
+/* ----- MEDIA QUERY == 340px / RESPONSIVE ----- */
+
+@media screen and (max-width: 340px){
+	.container-project{
+		margin-inline: 1rem;
+	}
+
+	.card-data{
+		width: 250px;
+		padding: 1rem;
+	}
+}
+
+@media screen and (max-width: 768px){
+	.card-container{
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: 1.5rem ;
+	}
+
+	
+}
+
+
+/* @media screen and (min-width: 1120px) {
+	.container-project {
+	  height: 100vh;
+	}
+  
+	.card-container {
+	  grid-template-columns: repeat(3, 1fr);
+	}
+	.card-image {
+	  width: 348px;
+	}
+	.card-data {
+	  width: 316px;
+	  padding-inline: 2.5rem;
+	}
+  } */
