@@ -41,7 +41,7 @@
 	.about-info p{
 		color: var(--color-white);
 	}
-
+	
 	.ri-moon-line:hover{
 		text-shadow: 1px 1px 15px 2px rgba(34, 45, 107, 0.603);
 	}
@@ -95,10 +95,17 @@
 		color: var(--color-white);
 	}
 
+	.card-data {
+		color: var(--color-white);
+		background: rgb(8, 7, 22, 70%);
+		border: solid 2px var(--color-white);
+		box-shadow: 0px 0px 50px 2px rgba(54, 66, 128, 0.397);
+	}
+
 	.contact-info{
 		background: transparent;
 		border: solid 2px var(--color-white);
-		box-shadow: 0px 0px 50px 2px rgba(25, 33, 80, 0.397);
+		box-shadow: 0px 0px 50px 2px rgba(25, 33, 80, 0.541);
 	}
 
 	.contact-info>p{
@@ -545,27 +552,29 @@ h3{
 
 /* ----- PROJECTS BOX ----- */
 .container-project{
+	flex-wrap: wrap;
 	display: flex;
 	justify-content: center;
 	margin-inline: 1.5rem;
-	padding-block: 5rem;
 }
 
 .card-container{
-	display: flex;
 	row-gap: 3.5rem;
-	margin-inline: 2rem;
+	margin: 2rem;
+	transition: 2s;
 }
 
 .card-article{
 	position: relative;
 	overflow: hidden;
+	
 }
 
 .card-image{
 	width: 428px;
 	border-radius: 1.5rem;
 	display: block;
+	transition: 2s;
 }
 
 .card-data{
@@ -904,6 +913,7 @@ footer{
 		display: flex;
 		justify-content: center;
 		width: 100%;
+		overflow: hidden;
 	}
 
 	.container-project{
@@ -941,7 +951,9 @@ footer{
 
 	
 }
-					/* PROJECT */
+					
+
+				/* PROJECT */
 
 
 /* ----- MEDIA QUERY == 340px / RESPONSIVE ----- */
