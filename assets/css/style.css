@@ -579,7 +579,7 @@ h3{
 
 .card-data{
 	width: 280px;
-	background-color: #00b5e7;
+	background-color: var(--color-white);
 	padding: 1.5rem 2rem;
 	box-shadow: 0 8px 16px hsla(0, 0%, 0%, .15);
 	border-radius: 1.5rem;
@@ -590,15 +590,38 @@ h3{
 	margin-inline: auto;
 	opacity: 0;
 	transition: opacity 1s 1s;
+	justify-items: center;
+}
+
+.card-btn{
+	background: var(--second-color);
+	color: var(--color-white);
+	padding: 1rem 2rem;
+	border-radius: 1rem;
+}
+
+.card-btn:hover{
+	background: var(--first-color-hover);
 }
 
 .card-desc{
 	display: block;
-	margin-bottom: .25rem;
+	margin-bottom: 1.3rem;
+	color: var(--color-white);
+	padding: 0 10px;
+	border-radius: .75rem;
+}
+
+.card-finish{
+	background-color: rgb(25, 172, 25);
+}
+
+.card-in-progress{
+	background-color: rgb(168, 37, 37);
 }
 
 .card-title{
-	margin-bottom: .75rem;
+	margin-bottom: .5rem;
 }
 
 .card-article:hover .card-data{
@@ -924,8 +947,35 @@ footer{
 		gap: 50px;
 	}
 
+	.card-container{
+		margin: 0;
+	}
+
 	.card-image{
 		width: 100%;
+	}
+
+	.card-data{
+		height: 125px;
+		justify-items: center;
+		justify-content: center;
+		width: 70%;
+	}
+
+	.card-desc{
+		display: none;
+	}
+
+	.card-title{
+		text-align: center;
+	}
+
+	.card-btn{
+		width:max-content;
+		font-size: 10px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 
 	.contact-info{
