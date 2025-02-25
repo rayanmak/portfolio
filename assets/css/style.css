@@ -124,7 +124,14 @@
 		border: solid 2px var(--color-white);
 	}
 
-	
+	.modal{
+		backdrop-filter: blur(10px)
+	}
+	.modal-content{
+		background-color: rgba(25, 33, 80, 0.541);
+		border: solid 2px var(--color-white);
+		box-shadow: 0px 0px 50px 2px rgba(25, 33, 80, 0.541);
+	}
 }
 
 /* ----- BASE ----- */
@@ -215,7 +222,7 @@ nav{
 	line-height: 90px;
 	background: var(--body-color);
 	padding-inline: 9vw;
-	z-index: 100;
+	z-index: 10;
 	transition: .3s;
 }
 
@@ -584,7 +591,7 @@ h3{
 	box-shadow: 0 8px 16px hsla(0, 0%, 0%, .15);
 	border-radius: 1.5rem;
 	position: absolute;
-	bottom: -9rem;
+	bottom: -13rem;
 	left: 0;
 	right: 0;
 	margin-inline: auto;
@@ -606,7 +613,7 @@ h3{
 
 .card-desc{
 	display: block;
-	margin-bottom: 1.3rem;
+	margin-bottom: .3rem;
 	color: var(--color-white);
 	padding: 0 10px;
 	border-radius: .75rem;
@@ -645,10 +652,10 @@ h3{
 
 @keyframes show-data {
 	50%{
-		transform: translateY(-10rem);
+		transform: translateY(-15rem);
 	}
 	100%{
-		transform: translateY(-7rem);
+		transform: translateY(-11rem);
 	}
 }
 
@@ -660,13 +667,13 @@ h3{
 
 @keyframes remove-data {
 	0%{
-		transform: translateY(-7rem);
+		transform: translateY(-11rem);
 	}
 	50%{
-		transform: translateY(-10rem);
+		transform: translateY(-15rem);
 	}
 	100%{
-		transform: translateY(.5rem);
+		transform: translateY(1rem);
 	}
 }
 
@@ -678,6 +685,66 @@ h3{
 	50%{
 		overflow: hidden;
 	}
+}
+
+/* ----- MODAL BOX ----- */
+
+.modal{
+	display: none;
+	position: fixed;
+	z-index: 10;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #00000073;
+}
+
+.modal-content{
+	background-color: var(--color-white);
+	margin: 180px auto;
+	border-radius: 20px;
+	width: 600px;
+	height: 70%;
+	animation: forwards modal-start 1s;
+	padding:  5px 20px;
+}
+
+@keyframes modal-start {
+	0%{
+		opacity: 0;
+		transform: translateY(10rem);
+	}
+	50%{
+		transform: translateY(-1rem);
+	}
+	100%{
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+
+.modal-img{
+	width: 100%;
+	justify-items: center;
+	border-radius: 1.5rem;
+	display: block;
+}
+
+.modal-content p{
+	text-align: center;
+	font-size: 50px;
+}
+
+.close-modal{
+	color: black;
+	float: right;
+	cursor: pointer;
+	position: relative;
+	font-size: 40px;
+	padding: 0 10px 0 0;
+	font-weight: bold;
 }
 
 /* ----- CONTACT BOX ----- */
@@ -854,16 +921,16 @@ footer{
 
 	.nav-menu{
 		position: fixed;
-		top: 80px;
+		top: 70px;
 		right: -100%;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 		backdrop-filter: blur(10px);
-		/* background: rgba(0, 0, 0, 0.144); */
+		background: rgba(0, 0, 0, 0.144);
 		width: 100%;
 		min-height: 450px;
-		height: 90vh;
+		height: 100%;
 		transition: .3s;
 	}
 

@@ -178,3 +178,22 @@ window.addEventListener('scroll', scrollActive)
 
 
 
+/* ----- MODAL ACTIVE ----- */
+
+var modal = document.getElementById("myModal"),
+    modalBtn = document.getElementById("modal_btn"),
+    modalSpan = document.getElementsByClassName("close-modal")[0]
+
+modalBtn.onclick = function() {
+  modal.style.display = "block";
+}
+
+modalSpan.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if(event.target == modal){
+    modal.style.display = 'none';
+  }
+}
