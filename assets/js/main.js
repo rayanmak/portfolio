@@ -13,6 +13,10 @@ function myMenuFunction() {
 
 }
 
+
+/* ---- DARK MODE TOGGLE ---- */ 
+
+
 const navToggle = document.getElementsByClassName('ri-menu-fill')[0],
       navClose = document.getElementsByClassName('ri-close-large-line')[0];
 console.log(navToggle)
@@ -36,6 +40,8 @@ if(navClose){
 }
 
 
+
+/* ---- DARK MODE TOGGLE ---- */ 
 
 
 const changeDark = document.getElementsByClassName('ri-moon-line')[0],
@@ -61,7 +67,16 @@ if(changeDark){
 }
 
 
+/* ---- CLOSE RESPONSIVE NAV ---- */ 
 
+const navLinks = document.getElementsByClassName('nav-link');
+
+for(let i = 0; i < navLinks.length; i++){
+  navLinks[i].addEventListener('click', () => {
+    myMenuFunction();
+  });
+  
+}
 
 
 
